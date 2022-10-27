@@ -1,0 +1,288 @@
+$main:#fff !important;
+
+/*文字/背景颜色*/
+$colors:(
+    'main':$main,
+    'red':#397be6,
+    'black':#333333,
+    'black1':#3A3A3A,
+    'black2':#c4c4c4,
+    'grey1':#747474,
+    'grey2':#999999,
+    'grey3':#666,
+);
+
+@each $label,$map in $colors {
+    .cr-#{$label}{ 
+        color:#{$map}
+    }
+    .cr-bg-#{$label}{
+        background-color:#{$map}
+    }
+}
+
+/*常用样式*/
+.bold-400{
+    font-weight: 400;
+}
+.bold {
+    font-weight: 500;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.width {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 弹性盒 */
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-start {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.flex-start-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.flex-center-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auto {
+    margin: 0 auto;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.btns{
+   min-width: 108px;
+   max-width: 176px;
+   height: 34px;
+   max-height: 34px;
+   text-align: center;
+   font-weight: 500;
+   color: #333;
+   font-family: PingFangSC-Medium, PingFang SC;
+   background: linear-gradient(90deg, #ECF5FF 0%, #E2F5FF 100%);
+   border-radius: 40px;
+   font-size: 12px;
+   transition: all .2s;
+   cursor: pointer;
+   user-select: none;
+   box-shadow: 0px 2px 9px 1px rgba(213,236,255,0.6100);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 6px;
+   box-sizing: border-box;
+}
+.min-line{
+    width: 44px;
+    height: 4px;
+    background: #137DF7;
+    border-radius: 3px;
+    margin-top: 4px;
+}
+/* 遮罩 */
+.Mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    background-color: rgba(0,0,0,.3);
+}
+
+/*动画样式*/
+.animate__slideOutUp,
+.animate__slideOutDown,
+.animate__fadeInLeft,
+.animate__fadeInRight{
+    animation-duration: 400ms;
+    transform: translate(100%, 0);
+}
+
+.slide-left-enter-active, 
+.slide-left-leave-active, 
+.slide-right-enter-active, 
+.slide-right-leave-active {
+  will-change: transform;
+  transition: transform .45s;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+.slide-right-enter-from,
+.slide-left-leave-to {
+  transform: translateX(100%);
+}
+
+.slide-right-leave-to,
+.slide-left-enter-from {
+  transform: translateX(-100%);
+}
+
+
+/*
+快捷样式
+文字大小相关，注意书写的大小、间距都由这里循环得出，没匹配到的则不生效
+使用方式 class="fs-12"
+*/
+
+$sizes: 0,
+2,
+4,
+5,
+6,
+8,
+10,
+12,
+14,
+16,
+18,
+20,
+22,
+23,
+24,
+26,
+28,
+30,
+32,
+34,
+36,
+38,
+39,
+40,
+42,
+44,
+46,
+48,
+50,
+52,
+54,
+56,
+58,
+60,
+64,
+66,
+68,
+70,
+74,
+80,
+100,
+110,
+116,
+120,
+130,
+136,
+138,
+146,
+156,
+166,
+176,
+186,
+;
+@each $item in $sizes {
+    .fs-#{$item} {
+        font-size: #{$item}px !important
+    }
+    .pl-#{$item} {
+        padding-left: #{$item}px !important
+    }
+    .pr-#{$item} {
+        padding-right: #{$item}px !important
+    }
+    .pt-#{$item} {
+        padding-top: #{$item}px !important
+    }
+    .pb-#{$item} {
+        padding-bottom: #{$item}px !important
+    }
+    .paddingT-#{$item} {
+        padding: #{$item}px 0 !important;
+    }
+    .paddingL-#{$item} {
+        padding: 0 #{$item}px !important;
+    }
+    .padding-#{$item} {
+        padding:#{$item}px !important;
+    }
+    .ml-#{$item} {
+        margin-left: #{$item}px !important
+    }
+    .mr-#{$item} {
+        margin-right: #{$item}px !important
+    }
+    .mt-#{$item} {
+        margin-top: #{$item}px !important
+    }
+    .mb-#{$item} {
+        margin-bottom: #{$item}px !important
+    }
+    .marginL-#{$item} {
+        margin: 0 #{$item}px !important;
+    }
+    .marginT-#{$item} {
+        margin: #{$item}px 0 !important;
+    }
+    .margin-#{$item} {
+        margin: #{$item}px !important;
+    }
+    .lh-#{$item} {
+        line-height: #{$item}px !important
+    }
+}

@@ -1,0 +1,127 @@
+body {
+	height: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+#app {
+	height: 100%;
+}
+
+html,
+body,
+ul,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+img,
+input {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+	font-weight: normal;
+	font-size: 12px;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+select {
+	outline: none;
+}
+
+ol {
+	list-style: none;
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+i,
+em {
+	font-style: normal;
+}
+
+button {
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.clear_fix:after {
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	overflow: hidden;
+}
+
+div::-webkit-scrollbar:horizontal {
+	height: 0px;
+	background-color: transparent;
+}
+
+div::-webkit-scrollbar-thumb:horizontal {
+	border: none;
+}
+
+div::-webkit-scrollbar {
+	width: 0;
+	background-color: transparent;
+}
+
+div::-webkit-scrollbar-thumb {
+	background-color: #097689;
+	border-radius: 6px;
+	border: none;
+}
+video::-internal-media-controls-download-button {
+	display:none;
+}
+video::-webkit-media-controls-enclosure {
+	overflow:hidden;
+}
+video::-webkit-media-controls-panel {
+	width: calc(100% + 30px);
+}
+video {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+}

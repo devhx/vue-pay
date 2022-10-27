@@ -1,0 +1,57 @@
+{
+  "name": "peyment",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "core-js": "^3.6.5",
+    "install": "^0.13.0",
+    "vant": "^3.5.2",
+    "vue": "^3.2.29",
+    "vue-clipboard3": "^1.0.1",
+    "vue-i18n": "^9.2.0-beta.26",
+    "vue-router": "^4.0.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "amfe-flexible": "^2.2.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0",
+    "image-webpack-loader": "^8.1.0",
+    "postcss-pxtorem": "^5.1.1",
+    "sass": "^1.42.1",
+    "sass-loader": "^7.3.1",
+    "unplugin-auto-import": "^0.9.3",
+    "unplugin-vue-components": "^0.21.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "no-console":"off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
